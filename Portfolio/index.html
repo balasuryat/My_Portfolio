@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/49bc86e4ff.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hello all,<br> I'm <span>BALASURYA</span><br><h6>Game Developer (Concept or Story board Artist)</h6></h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------- About section--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./my_pic.jpg" class="pic1">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Nothing epic happens in real life, so I choose to be a game developer. 
+                        I would like to show the real and logical phase of a game to the world. I'll make the reality of gaming to touch the gamers mind. Me and my team is working on a game concept which haven't yet realized.
+                         I have a confidence of mind that the game will change the gaming history.</p><br>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming languages</span><br><br>C# Programming<br><br>C++ Programming</li><br>
+                                <li><span>Tools</span><br><br>Unity Engine<br><br>Blender<br><br>Unreal Engine</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tab-contents" id="education"> 
+                            <ul>
+                                <li><span>Secondary schooling</span><br><br>Narayana Olympiad School </li><br>
+                                <li><span>Higher Secondary schooling</span><br><br>Paavai Vidhyashram</li><br>
+                                <li><span>College</span><br><br>Sri Eshwar College Of Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tab-contents" id="certificate">
+                            <ul>
+                                <li><span>Udemy</span><br><br>Data structure and algorithm using C</li>
+                                <li><span>Solo learn</span><br><br>My SQL</li>
+                                <li><span>Front - end development</span><br><br>Coursera</li>
+                                <li><span>Basic SQL</span><br><br>Hacker Ranker</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------- Services section --------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Trap Escaper : 2D</h2>
+                    <p>Game Engine : Unity<br>
+                        Language : C#</p>
+                    <p>This game is an exciting 2D puzzle-platformer game where players find themselves trapped in a complex and treacherous maze filled with deadly traps and obstacles.
+                         The goal is to navigate through the maze, and ultimately escape to freedom.</p>
+                         <img src="./trap game img.jpg" class="game1">
+                </div>
+                <div>
+                    <h2>Alien Arrival : 3D</h2>
+                    <p>Game Engine : Unity<br>
+                        Language : C#</p>
+                    <p>Alien Arrival is an immersive 3D survival game where you find yourself stranded on an uncharted alien planet teeming with extraterrestrial life forms.
+                         Your primary objective is to survive in this hostile and unknown environment while unraveling the mysteries of this alien world.
+                         Brace yourself for a thrilling adventure filled with danger, exploration, and survival instincts</p>
+                        <img src="./alien game.png" class="game2">
+                        </div>
+                <!-- <div>
+                    <h2>Website 3</h2>
+                    <p>To be added</p>
+                    <a href="#">LEARN MORE</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- --------- contact ---------/ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>balasuryatkbs27@gmail.com</p>
+                    <!-- <p><i class="fa-solid fa-phone"></i>9025267635</p> -->
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/bala-surya-27tk23/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a herf="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a herf="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                      <input type="text" name="Name" placeholder="Your Name" required>
+                      <input type="email" name="Email" placeholder="Your Email" required>
+                      <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                      <button type="submit" class="btn btn2">Sumit</button>
+                    </form>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
